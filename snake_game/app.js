@@ -8,7 +8,11 @@ window.requestAnimationFrame(main)
 
 function main(currentTime) {
     if(gameOver){
-        return alert("You Lose!")
+        if(confirm("You Lost! Pres OK to Restart")){
+            window.location = '/snake_game/'
+        }
+        return
+        
     }
     window.requestAnimationFrame(main);
     const secondsSincelastRender = (currentTime - lastRenderTime) / 1000
