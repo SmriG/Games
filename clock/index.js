@@ -23,6 +23,9 @@ function getTime() {
   second = addZero(second);
   day = changeToDay(day);
   todayDate = addZero(todayDate)
+  const el = document.querySelector(".time");
+  const time = hour + ":" + minute + ":" + second
+  el.innerText = time;
 }
 
 function addZero(value) {
@@ -34,4 +37,8 @@ function addZero(value) {
 
 function changeToDay(value) {
   return weekdays[value];
+}
+
+window.onload = function(){
+  setInterval(getTime, 500)
 }
