@@ -7,6 +7,7 @@ let weekdays = {
   6: "SAT",
   7: "SUN",
 };
+let alarmEl = document.querySelector(".alarm")
 
 function getTime() {
   const date = new Date();
@@ -27,7 +28,7 @@ function getTime() {
 
   const elTime = document.querySelector(".time");
   const time = day+ " : " + Math.abs(hour - 12) + " : " + minute + " : " + second + " " + session;
-    elTime.innerHTML = time;
+  elTime.innerHTML = time;
 }
 
 function addZero(value) {
@@ -52,3 +53,7 @@ function changeSession(hour) {
 window.onload = function () {
   setInterval(getTime, 500);
 };
+
+alarmEl.addEventListener("click",()=>{
+  
+})

@@ -17,7 +17,7 @@
 .clock{
     position: absolute;
     height: 100px;
-    width: 30vw;
+    width: 350px;
     background-color: rgb(18, 17, 17);
     display: flex;
     align-items: center;
@@ -42,9 +42,29 @@ p{
 
 .alarm{
     position: relative;
-    top: 20%;
+    top: 5%;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+}
+
+h3{
+    color: white;
+    font-family: 'Cormorant SC', serif;
+
+}
+
+.set_alarm{
+    top: 20%;
+}
+
+input{
+    background: transparent;
+    /* border: 0; */
+    border-bottom: 2px, solid gray;
+    color: white;
+    outline: 0;
+    padding: 2px 0;
+    transition: border-color 0.2s;
 }
