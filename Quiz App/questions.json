@@ -1,31 +1,31 @@
 [
   {
     "id": 1,
-    "question": "What is the capital of India?",
+    "question_text": "What is the capital of India?",
     "options": ["Mumbai", "Delhi", "Banglore", "Hyderabad"],
     "answer": "Delhi"
   },
   {
     "id": 2,
-    "question": "How many moons does Jupiter have?",
+    "question_text": "How many moons does Jupiter have?",
     "options": ["13", "65", "79", "1"],
     "answer": "79"
   },
   {
     "id": 3,
-    "question": "What does React uses to increase its performance?",
+    "question_text": "What does React uses to increase its performance?",
     "options": ["Virtual DOM", "Real DOM", "Both A and B", "None of the above"],
     "answer": "Virtual DOM"
   },
   {
     "id": 4,
-    "question": "They come out at night without being called and are lost in the day without being stolen. What are they?",
+    "question_text": "They come out at night without being called and are lost in the day without being stolen. What are they?",
     "options": ["Light", "Bats", "Stars", "Flights"],
     "answer": "Starts"
   },
   {
     "id": 5,
-    "question": "How many pairs of ribs are there in a human body?",
+    "question_text": "How many pairs of ribs are there in a human body?",
     "options": ["10", "13", "16", "12"],
     "answer": "12"
   }
