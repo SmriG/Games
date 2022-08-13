@@ -1,11 +1,12 @@
 import questions from './questions.json' assert {type:"json"};
 
-const TotalQuestions = questions.length;
+const TotalQuestions = questions.length-1;
 let SCORE = 0;
+let INDEX = 0;
 
 function displayQuestion(question){
-    const QuestionDiv = document.querySelector(".question")
-    const questionHeading = document.createElement("h3");
+    const QuestionDiv = document.querySelector(".question_section")
+    const questionHeading = document.createElement("h4");
     questionHeading.classList = "question_text";
     questionHeading.textContent = question.question_text;
     QuestionDiv.appendChild(questionHeading);
@@ -19,7 +20,7 @@ function displayQuestion(question){
 }
 
 function displayButtons(i){
-    const ButtonDiv = document.querySelector(".buttons");
+    const ButtonDiv = document.querySelector(".button_section");
     const evaluateButton = document.createElement('button');
     const questionButton = document.createElement('button');
     if(i===TotalQuestions){
@@ -27,7 +28,8 @@ function displayButtons(i){
         questionButton.style.backgroundColor="rgb(101, 198, 101)"
     }else{
         questionButton.textContent = "NEXT"
-        questionButton.style.backgroundColor="rgb(64, 110, 197)"
+        questionButton.style.backgroundColor="rgb(64, 110, 197)";
+        questionButton.onclick = nextButton;
 
     }
     evaluateButton.textContent="EVALUATE";
@@ -49,3 +51,39 @@ function correctAnswer(anwser, selected){
         status.style.color="red";
     }
 }
+
+function displayScore(){
+    const score = document.querySelector(".info_section");
+    score.textContent = "SCORE: " + SCORE
+}
+
+displayScore()
+
+function startGame(){
+
+    displayQuestion(questions[INDEX])
+    displayButtons(INDEX)
+}
+
+function nextButton(){
+    INDEX+=1;
+    displayQuestion(questions[INDEX]);
+    // displayButtons(INDEX)
+
+};
+
+function finishButton(){
+    INDEX = 0;
+    SCORE = 0;
+    displayQuestion(questions[INDEX]);
+    // displayButtons(INDEX)
+
+
+}
+
+window.onload = function () {
+    startGame()
+
+  };
+  
+  
