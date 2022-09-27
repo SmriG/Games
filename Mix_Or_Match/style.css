@@ -74,13 +74,33 @@ body{
 
 }
 
+.card.visible .card-back{
+transform: rotateY(-180deg);
+}
+
+.card.visible .card-front{
+    transform: rotateY(0);
+}
+
 .card-back{
     background-color: black;
     border-color: #ff6d00;
 }
 
 .card-front{
-    transform: rotateX(180deg);
+    background-color: #ffbb89;
+    border-color: #333;
+    transform: rotateY(180deg);
+}
+
+.card-value{
+    transform: scale(0.9);
+    transition: transform 100ms ease-in-out;
+
+}
+
+.card-front:hover .card-value{
+transform: scale(1);
 }
 
 .cob-web{
@@ -88,10 +108,9 @@ body{
     width: 47px;
     height: 47px;
     transition: width 100ms ease-in-out, height 100ms ease-in-out;
-
 }
 
-.card-back:hover .cob-web{
+.card-face:hover .cob-web{
     width: 52px;
     height: 52px;
 }
