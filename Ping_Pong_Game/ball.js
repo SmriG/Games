@@ -1,3 +1,5 @@
+import AudioController from "./audio.js";
+
 const INITIAL_VELOCITY = 0.02;
 const VELOCITY_INCREASE = 0.00001;
 
@@ -5,6 +7,7 @@ export default class Ball {
   constructor(ballElem) {
     this.ballElem = ballElem;
     this.reset();
+    this.audio = new AudioController();
   }
 
   get x() {
@@ -50,8 +53,10 @@ export default class Ball {
       this.direction.y *= -1;
     }
     if (paddleRects.some((r) => isCollison(r, rect))) {
+      this.audio.hit();
       this.direction.x *= -1;
     }
+    
   }
 }
 

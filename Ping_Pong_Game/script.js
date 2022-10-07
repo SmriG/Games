@@ -1,6 +1,7 @@
 // update loop
 import Ball from "./ball.js";
 import Paddle from "./paddle.js";
+import AudioController from "./audio.js";
 
 const ball = new Ball(document.getElementById("ball"));
 const playerPaddle = new Paddle(document.getElementById("player-paddle"));
@@ -39,6 +40,8 @@ function handleLose() {
   } else {
     computerScoreElem.textContent = parseInt(computerScoreElem.textContent) + 1;
   }
+  const audio = new AudioController();
+  audio.fail();
   ball.reset();
   computerPaddle.reset();
   playerPaddle.reset();
