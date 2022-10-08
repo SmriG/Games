@@ -18,4 +18,6 @@ Match the pair cards before time runs out! :triumph:
 ## PING-PONG
 Beat the Computer. All the best! :cowboy_hat_face:
 
+[DEMO](https://drive.google.com/file/d/1mRhTGUA2uPVh2fdudQQUMmgwejiYcBhG/view?usp=sharing)
+
 ![alt text](https://github.com/SmriG/Games/blob/master/Ping_Pong_Game/ping-pong.jpeg)
